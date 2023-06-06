@@ -10,7 +10,7 @@ html, body {
 
 /* Header */  
 .top-nav {
-    height: 100px;
+    height: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
