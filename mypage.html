@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+	</script>
+	<script type = "text/javascript">
+	   google.charts.load('current', {packages: ['corechart']});     
+	</script>
+	<style>
+		body{
+			background: #1e1e2a;
+		}
+
+		.margin{
+			margin: 70px;
+		}
+
+        .navbar{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+		.bg-1 {
+			background: #1e1e2a;
+			color: #ffffff;
+			padding-top: 70px;
+			padding-bottom: 70px;	
+            padding-left: 70px;		
+			
+		}
+		.bg-2 {
+			padding-top: 70px;
+			padding-bottom: 70px;			
+		}	
+		.bg-3{
+			background-color: #ffb43a;
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		.bg-4{			
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		.icon {
+			color: #f4511e;
+			font-size: 50px;
+			margin: 25px 0;
+		}
+		.member{
+			border: 10px solid transparent;
+		}		
+		.member:hover{
+			border-color: #e2e2e2;
+		}
+
+		.swiper-container {
+			background-color: #e2e2e2;
+			height:800px;
+			border:5px solid silver;
+			border-radius:7px;
+			box-shadow:0 0 20px #ccc inset;
+			margin-left: 70px;
+		}
+		.swiper-slide {
+			text-align:center;
+			display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+			align-items:center; /* 위아래 기준 중앙정렬 */
+			justify-content:center; /* 좌우 기준 중앙정렬 */
+		}
+		.swiper-slide img {
+			box-shadow:0 0 5px #555;
+			max-width:100%; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+		}
+		#container {
+			background-color: #e2e2e2;
+			height:500px;
+			border:5px solid silver;
+			border-radius:7px;
+			box-shadow:0 0 20px #ccc inset;
+			margin-left: 0px;
+		}
+
+		.swpimg{
+			height:"570px";
+			width:"450px";
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- Profile -->
+	<div class="container-fluid text-left bg-1">
+		<h1 style="margin-left: 20px; ">My Account</h1>
+        <div class="container-fluid text-center bg-1">
+            <img src="user.png" class = "img-circle member" width="200" height="200" data-toggle="collapse" data-target="#member1">
+            <div id="member1" class="collapse"><p style="padding-top: 70px;">address@gmail.com</p></div>
+        </div>
+	</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+<!-- Wish List -->
+<div class="margin">
+	<div class="swiper-container align-self-center">
+    <h1 style="margin-left: 20px; margin-bottom: -20px;">Wish List</h1>
+	<div class="swiper-wrapper ">
+        
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86996/86996_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86849/86849_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86989/86989_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87059/87059_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86825/86825_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87035/87035_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87055/87055_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87047/87047_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87081/87081_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87034/87034_320.jpg"></div>
+		<div class="swiper-slide"><img class="swpimg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87016/87016_320.jpg"></div>
+	</div>
+
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+</div></div>
+
+
+<!-- Charts -->
+
+<div class="margin">
+	<div id = "container">
+	</div>
+</div>
+      
+	  <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+             var data = google.visualization.arrayToDataTable([
+               ['star', 'number'],
+               ['★★★★★',  23],
+               ['★★★★',  20],
+               ['★★★',  10],
+               ['★★',  5],
+               ['★',  2]
+            ]);
+
+            var options = {
+				title: 'My preference',
+				colors:['#FFD400','#FFDD33','#FFE359','#FFF0A6','#FFFBE5'],
+				backgroundcolor: '#e2e2e2',
+				labels:{fontColor:"black"}
+		};
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+
+   </body>
+
+<div class="margin">
+	<div class="swiper-container align-self-center">
+		<h2 style="padding-left: 70px;">★★★★★</h2>
+		<div class="swiper-wrapper ">
+			
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-1.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-2.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie-4.jpg"></div>			
+		</div>
+	
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+
+	</div>
+</div>
+
+<div class="margin">
+	<div class="swiper-container align-self-center">
+		<h2 style="padding-left: 70px;">★★★★</h2>
+		<div class="swiper-wrapper ">
+			
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-1.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-2.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie-4.jpg"></div>			
+		</div>
+	
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+
+	</div>
+</div>
+
+<div class="margin">
+	<div class="swiper-container align-self-center">
+		<h2 style="padding-left: 70px;">★★★</h2>
+		<div class="swiper-wrapper ">
+			
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-1.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-2.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie-4.jpg"></div>			
+		</div>
+	
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+
+	</div>
+</div>
+
+<div class="margin">
+	<div class="swiper-container align-self-center">
+		<h2 style="padding-left: 70px;">★★</h2>
+		<div class="swiper-wrapper ">
+			
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-1.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-2.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie-4.jpg"></div>			
+		</div>
+	
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+
+	</div>
+</div>
+
+<div class="margin">
+	<div class="swiper-container align-self-center">
+		<h2 style="padding-left: 70px;">★</h2>
+		<div class="swiper-wrapper ">
+			
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="범죄도시3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-1.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-2.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="movie-3.jpg"></div>
+			<div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie-4.jpg"></div>			
+		</div>
+	
+	<!-- swiper button -->
+	<div class="swiper-button-next" ></div><!-- next -->
+	<div class="swiper-button-prev"></div><!-- prev -->
+
+	<!-- page -->
+	<div class="swiper-pagination"></div>
+
+	</div>
+</div>
+
+
+
+<script>
+
+	// poster mousein 
+	function bigImg(x){
+		x.style.height="620px";
+		x.style.width="520px";
+	}
+
+	// poster mouseout
+	function normalImg(x){
+		x.style.height="570px";
+		x.style.width="450px";
+	}
+
+new Swiper('.swiper-container', {
+
+	slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
+	spaceBetween : 30, // 슬라이드간 간격
+	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+	// 그룹수가 맞지 않을 경우 빈칸으로 메우기
+	// 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듦
+	loopFillGroupWithBlank : true,
+
+	loop : true, // 무한 반복
+
+	pagination : { // 페이징
+		el : '.swiper-pagination',
+		clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+	},
+	navigation : { // 네비게이션
+		nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+		prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+	},
+});
+
+
+
+</script>
+
+
