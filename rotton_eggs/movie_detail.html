@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie_detail.css">
+    <title>Detail Page</title>
+
+    <!-- <script>
+        
+        function play() { 
+            var frame = document.getElementById("youtube-frame");
+            frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/kpGo2_d3oYE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;' allowfullscreen></iframe>";
+        }
+
+        function close() {
+            document.getElementById("youtube-frame").open('about:blank','_self').self.close();
+        }
+    </script> -->
+
+</head>
+
+<body>
+    <div class="full-page">
+
+        <!-- Header -->
+        <div class="top-nav">
+
+            <!-- Logo -->
+            <div class="logo-box">
+                <img id="logo" src="logo.png">
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav-box">
+                <a href="#home">Home</a>
+                <a href="#popular">Trending</a>
+                <a href="#movies">Explore</a>
+                <a href="#favoties">My List</a>
+            </div>
+            
+            <!-- Search  -->
+            <div class="search-box">
+                <form>
+                    <input type="text" name="search" placeholder="Search movies..">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            
+            <!-- Profile -->
+            <div class="profile-box">
+                <a href="#profile"><img id="user" src="user.png"></a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Top Container (Movie Info) -->
+        <div class="main-picture-box">
+            <img class="main-scene-1" src="little_mermaid.png">
+        </div>
+
+        <div class="about-movie-box">
+            <div class="movie-poster">
+                <img class="poster-img" src="little_mermaid_poster.png">
+            </div>
+            
+            <div class="about-movie-box-2">
+                <div class="title-box">
+                    <h1 class="title"> The Little Mermaid </h1>
+                    <p> 2023 ・ Adventure/Fantasy/Musical ・ United States </p>
+                    <hr>
+                </div>
+                <!-- 리스트 추가 / 별점주기 -->
+                <!-- <div class="watch-trailer-box">
+                    <p>
+                        <button class="trailer-btn" onclick="play()">
+                            <img src="play_button.png" 
+                            style="width:36px;height:36px;">
+                        </button>
+                    </p>
+                    <div id="youtube-frame"></div>
+                    <p>
+                        <button class="close-btn" onclick="close();">
+                            <img src="close_button.png" 
+                            style="width:36px;height:36px;">
+                        </button>
+                    </p>
+                </div> -->
+                <div class="button">
+                    <a href="https://youtu.be/kpGo2_d3oYE" target="_blank">
+                        <img alt="Qries" src="watch_btn.png" width=124" height="48">
+                    </a>
+                    <a href="#">
+                        <img alt="Qries" src="add_btn.png" width=124" height="48">
+                    </a>
+                </div>
+
+
+
+            </div>
+            
+
+        </div>
+
+        <!-- Body Container (Movie Info) -->
+        <div class="movie-detail-box">
+
+            <!-- Overview -->
+            <div class="movie-overview">
+                <h1>Overview</h1>
+
+                <div class="info">
+                    <p>The Little Mermaid</p>
+                    <p>2023 · United States · Adventure</p>
+                    <p>2h 15m</p>
+                </div>
+
+                <div class="summary">
+                    <p>A live action remake of Disney's 'The Little Mermaid' (1989).</p>
+                </div>
+
+                <hr>
+            </div>
+
+            <!-- Cast/Crew -->
+            <div class="cast-box">
+                <h1>Cast/Crew</h1>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+</body>
+
+
+</html>
