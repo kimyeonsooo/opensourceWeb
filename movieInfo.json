@@ -99,6 +99,46 @@
         "poster": "Decision.jpg",
         "stillcut": "Decision_stillcut.jpg",
         "url": "https://pedia.watcha.com/contents/m5DP0eR"
+    }, {
+        "name": "Set Me Free",
+        "year": "2014",
+        "country": "Korea",
+        "genre":"Drama",
+        "running Time":"1h 48m",
+        "summary": "The seventeen year old 'Yeong-jae' was safely sent away to the group home 'Isaac's house'. He is old enough to leave now, but doesn't want to go back home to his irresponsible father.",
+        "poster":"SetMeFree.jpg",
+        "stillcut":"SetMeFree_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/m5ZXXm9"
+    }, {
+        "name": "The Wailing",
+        "year": "2016",
+        "country": "Korea",
+        "genre":"Mystery",
+        "running Time":"2h 36m",
+        "summary": "A stranger arrives in a little village and soon after a mysterious sickness starts spreading. A policeman is drawn into the incident and is forced to solve the mystery in order to save his daughter.",
+        "poster":"TheWailing.jpg",
+        "stillcut":"TheWailing_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mWLjVZD"
+    }, {
+        "name": "The Host",
+        "year": "2006",
+        "country": "Korea",
+        "genre":"Thriller",
+        "running Time":"1h 59m",
+        "summary": "Following the dumping of gallons of toxic waste in the river, a giant mutated squid-like appears and begins attacking the populace. Gang-du's daughter Hyun-seo is snatched up by the creature; with his family to assist him, he sets off to find her.",
+        "poster":"TheHost.jpg",
+        "stillcut":"TheHost_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mOPooYW"
+    }, {
+        "name": "Memories of Murder",
+        "year": "2003",
+        "country": "Korea",
+        "genre":"Crime",
+        "running Time":"2h 12m",
+        "summary": "1986 Gyunggi Province. The body of a young woman is found brutally raped and murdered. Two months later, a series of rapes and murders commences under similar circumstances. And in a country that had never known such crimes, the dark whispers about a serial murderer grow louder. A special task force is set up in the area, with two local detectives Park Doo-Man and Jo Young-Goo joined by a detective from Seoul who requested to be assigned to the case.",
+        "poster":"MemoriesofMurder.jpg",
+        "stillcut":"MemoriesofMurder_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mE5DYeW"
     }
 
 ]
