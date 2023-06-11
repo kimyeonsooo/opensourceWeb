@@ -10,7 +10,7 @@ html, body {
 
 /* Header */  
 .top-nav {
-    height: 90px;
+    height: 95px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ html, body {
 
 /* styling logo */  
 .logo-box {
-    margin-top: 35px;
+    margin-top: 40px;
     margin-right: 70px;
 }
 
@@ -30,11 +30,14 @@ html, body {
 /* styling nav menu */  
 .nav-box {
     margin: 45px;
+    margin-top: 55px;
+    margin-right: 30px;
 }
 
 .top-nav a {
     margin: 16px;
-    margin-top: 25px;
+    margin-top: 18px;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 20px;
     text-align: center;
@@ -43,7 +46,7 @@ html, body {
 
 /* styling search bar */
 .search-box {
-    margin-top: 42px;
+    margin-top: 47px;
 }
 
 input[type=text] {
@@ -68,7 +71,7 @@ form.search button {
 /* styling profile */  
 .profile-box {
     width: 80px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-left: 30px;
     text-align: center;
 }
