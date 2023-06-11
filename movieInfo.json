@@ -49,5 +49,56 @@
         "poster":"Maggie.jpg",
         "stillcut":"Maggie_stillcut.jpg",
         "url":"https://pedia.watcha.com/contents/mOPoG8D"
+    },{
+        "name": "The Man from Nowhere",
+        "year": "2010",
+        "country": "Korea",
+        "genre": "Drama/Action/Crime ・ Korea",
+        "running Time": "1h 59m",
+        "summary": "His only friend called him 'the man from nowhere'... Taesik, a former special agent becomes a loner after losing his wife in a miserable accident and lives a bitter life running a pawnshop. He only has a few customers and a friend named Somi, a little girl next door. As Taesik spends more and more time with Somi, he gets attached to her. Then Somi is kidnapped by a gang, and as Taesik tries to save Somi by becoming deeply associated with the gang his mysterious past is revealed...",
+        "poster": "Theman.jpg",
+        "stillcut": "Theman_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/m5ZXrxO" 
+    },{
+        "name": "New World",
+        "year": "2012",
+        "country": "Korea",
+        "genre": "Crime/Drama/Action",
+        "running Time": "2h 14m",
+        "summary": "An undercover cop has his loyalties tested when the boss of the corporate gang he's spent years infiltrating dies.",
+        "poster": "Newworld.jpg",
+        "stillcut": "Newworld_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/m5e8v3d"
+    },{
+        "name": "The Admiral: Roaring Currents",
+        "year": "2014",
+        "country": "Korea",
+        "genre": "Periodic Drama/Action/Biography",
+        "running Time": "2h 8m",
+        "summary": "The film mainly follows the famous 1597 Battle of Myeongryang during the Japanese invasion of Korea (1592-1598), where the iconic Joseon admiral Yi Sun-sin managed to destroy a total of 133 Japanese warships with only 13 ships remaining in his command. The battle, which took place in the Myeongryang Strait off the southwest coast of the Korean Peninsula, is considered one of the greatest victories of Yi.",
+        "poster": "Admiral.jpg",
+        "stillcut": "Admiral_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/mWzM9D5" 
+    },{
+        "name": "Dongju: The Portrait of a Poet",
+        "year": "2015",
+        "country": "Korea",
+        "genre": "Drama/Periodic Drama/Biography",
+        "running Time": "1h 50m",
+        "summary": "Based on the life and work of Koreas renowned poet, Yun Dong Ju. Dong Ju, while studying literature in Japan, was charged and detained for having participated in the Korean Independence Movement. Known to have created hundreds of poems during his time in jail where he spent the last two years of his life, Dong Ju passed away at the young age of 27. Although it has not been proven, some believe he died due to medical experiments that were performed on his living body.",
+        "poster": "Dongju.jpg",
+        "stillcut": "Dongju_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/mdBzQED"
+    },{
+        "name": "Decision to Leave",
+        "year": "2021",
+        "country": "Korea",
+        "genre": "Romance/Drama/Mystery",
+        "running Time": "2h 18m",
+        "summary": "Hae-Joon, a seasoned detective, investigates the suspicious death of a man on a mountaintop. Soon, he begins to suspect Seo-rae, the deceased's wife, while being unsettled by his attraction to her.",
+        "poster": "Decision.jpg",
+        "stillcut": "Decision_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/m5DP0eR"
     }
+
 ]
