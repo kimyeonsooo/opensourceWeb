@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie_detail.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Decision to Leave</title>
+
+</head>
+
+<body>
+    <div class="full-page">
+
+        <!-- Header -->
+        <div class="top-nav">
+
+            <!-- Logo -->
+            <div class="logo-box">
+                <img id="logo" src="imgs/logo.png">
+            </div>
+            
+            <!-- Search  -->
+            <div class="search-box">
+                <form>
+                    <input type="text" name="search" style="border: none; background: transparent;" placeholder="Search movies..">
+                </form>
+            </div>
+            
+            <!-- Profile -->
+            <div class="profile-box">
+                <a href="#profile"><img id="user" src="imgs/user.png"></a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Top Container (Movie Info) -->
+        <div class="main-picture-box">
+            <img class="main-scene-1" src="movie_imgs/Decision_stillcut.jpg">
+        </div>
+
+        <div class="about-movie-box">
+            
+            <!-- Movie Poster -->
+            <div class="movie-poster">
+                <img class="poster-img" id="myImg" src="movie_imgs/Decision.jpeg">
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <!-- Modal js code -->
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                
+                // Get the image and insert it inside the modal
+                var img = document.getElementById("myImg");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                    modal.style.display = "none";
+                }
+            </script>
+            
+            <div class="about-movie-box-2">
+                <!-- Movie title info (Upper) -->
+                <div class="title-box">
+                    <h1 class="title"> Decision to Leave </h1>
+                    <p> 2021 ・ Romance/Drama/Mystery ・ Korea </p>
+                    <hr>
+                </div>
+
+                <!-- Rating Bar / Add to my List (Lower) -->
+                <div class="rating">
+                    <h4 class="rating-label">"How was this movie?"</h4>
+                        <div class="rating-star">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                            <input type="radio" name="html">
+                        </div>
+                </div>
+
+                <div class="button">
+                    <a href="https://youtu.be/9aMHyTqvIvU" target="_blank">
+                        <img alt="Qries" src="imgs/watch_btn.png" width="124" height="48">
+                    </a>
+                    <button onclick="myFunction()">
+                        <img src="imgs/add_btn.png" width="124" height="48">
+                    </button>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        confirm("Successfully Added!")
+                    }
+                </script>
+
+            </div>
+
+        </div>
+
+        <!-- Body Container (Movie Info) -->
+        <div class="movie-detail-box">
+
+            <!-- Overview -->
+            <div class="movie-overview">
+                <h1>Overview</h1>
+
+                <div class="info">
+                    <p>Decision to Leave <br>
+                       2021 · Korea · Romance <br>
+                       2h 18m</p>
+                </div>
+
+                <div class="summary">
+                    <p>Hae-Joon, a seasoned detective, investigates the suspicious death of a man on a mountaintop.<br> 
+                       Soon, he begins to suspect Seo-rae, the deceased's wife, while being unsettled by his attraction to her.</p>
+                </div>
+
+                <hr>
+            </div>
+
+            <!-- Cast/Crew -->
+            <div class="cast-box">
+
+                <h1>Cast/Crew</h1>
+
+                <div class="cast">
+                    <div class="cast-box">
+                        <a href="https://rb.gy/5tlip" target="_blank">
+                            <img src="cast_imgs/director.jpeg" alt="" class="cast-img">
+                        </a>
+                        <div class="cast-name">
+                            <p class="role">Director</p>
+                            <p>Park Chan Wook</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box"> 
+                        <a href="https://rb.gy/hi27a" target="_blank">
+                            <img src="cast_imgs/act01.jpeg" alt="" class="cast-img">
+                        </a>
+                        <div class="cast-name">
+                            <p class="role">Main Actor</p>
+                            <p>Tang Wei</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act02.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Main Actor</p>
+                            <p>Park Hae Il</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act03.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Supporting Actor</p>
+                            <p>Lee Jung Hyun</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act04.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Supporting Actor</p>
+                            <p>Go Kyung Pyo</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act05.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Supporting Actor</p>
+                            <p>Kim Shin Young</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act06.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Supporting Actor</p>
+                            <p>Jeong Yeung Suk</p>
+                        </div>
+                    </div>
+
+                    <div class="cast-box">
+                        <img src="cast_imgs/act07.png" alt="" class="cast-img">
+                        <div class="cast-name">
+                            <p class="role">Supporting Actor</p>
+                            <p>Yoo Seung Mok</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
