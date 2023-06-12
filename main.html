@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ROTTON EGGs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+  <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+  <div class="top-nav">
+
+    <!-- Logo -->
+    <div class="logo-box">
+      <img id="logo" src="imgs/logo.png">
+    </div>
+
+    <!-- Search  -->
+    <div class="search-box">
+      <form>
+        <input type="text" name="search" id="searchInput" style="border: none; background: transparent;"
+          placeholder="Search movies..">
+        <ul style="color: white" id="searchResults"></ul>
+      </form>
+    </div>
+
+    <!-- Profile -->
+    <div class="profile-box">
+      <a href="mypage.html"><img id="user" src="imgs/user.png"></a>
+    </div>
+
+  </div>
+
+
+  <!-- partial:index.partial.html -->
+  <!-- Slider main container -->
+  <!-- TOP -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img width=100% src="img/DecisiontoLeave_stillcut.jpg"></div>
+      <div class="swiper-slide"><img width=100% src="img/Maggie_stillcut.jpg"></div>
+      <div class="swiper-slide"><img width=100% src="img/Dongju_stillcut.jpg"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="arrow">
+    <img width="100px" src="arrow.png">
+  </div>
+
+  <div class="poster">
+    <section>
+      <h1>#High average rating</h1>
+      <a href="movie_detail.html">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/Decision.jpg" alt="" class="posters">
+      </a>
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_imgs/Admiral.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_imgs/Dongju.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/TheHost.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/Newworld.jpg" alt="" class="posters">
+    </section>
+    <section>
+      <h1>Trending director, Bong Joon-ho's</h1>
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/TheHost.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/Snowpiercer.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/Parasite.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/mother.jpg" alt="" class="posters">
+      <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="movie_img/TheWailing.jpg" alt="" class="posters">
+    </section>
+  </div>
+  </div>
+  <!-- partial -->
+  <script>
+    // poster mousein 
+    function bigImg(x) {
+      x.style.transform = "scale(1.2)";
+      x.style.zIndex = "1";
+    }
+
+    // poster mouseout
+    function normalImg(x) {
+      x.style.transform = "scale(1)";
+      x.style.zIndex = "0";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Load movies data from JSON file
+      fetch("movies.json")
+        .then(response => response.json())
+        .then(data => {
+          const searchInput = document.getElementById("searchInput");
+          const searchResults = document.getElementById("searchResults");
+
+          searchInput.addEventListener("input", function () {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredMovies = data.filter(movie =>
+              movie.title.toLowerCase().includes(searchTerm)
+            );
+
+            displaySearchResults(filteredMovies);
+          });
+        })
+        .catch(error => console.error("Error loading movies data:", error));
+    });
+
+    function displaySearchResults(movies) {
+      const searchResults = document.getElementById("searchResults");
+
+      // Clear previous search results
+      searchResults.innerHTML = "";
+
+      if (movies.length === 0) {
+        // No matching movies found
+        const noResultsMessage = document.createElement("li");
+        noResultsMessage.textContent = "No matching movies found";
+        searchResults.appendChild(noResultsMessage);
+      } else {
+        // Display search results
+        movies.forEach(function (movie) {
+          var Link = document.createElement("a"); // 링크 요소 생성
+          Link.href = "movie_detail.html"; // 이동할 링크 설정
+
+
+          const movieItem = document.createElement("li");
+          movieItem.textContent = movie.title;
+
+          movieItem.addEventListener("click", function () {
+            window.location.href = "movie_detail.html"; // 이미지 클릭 시 movie_detail.html로 이동
+          });
+
+          Link.appendChild(movieItem);
+          searchResults.appendChild(movieItem);
+
+
+        });
+      }
+    }
+  </script>
+  <script type="text/javascript" src="movies.json"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>

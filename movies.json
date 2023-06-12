@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Minari",
+      "director": "Director 1",
+      "genre": "Genre 1"
+    },
+    {
+      "title": "Decision to Leave",
+      "director": "Director 2",
+      "genre": "Genre 2"
+    },
+    {
+      "title": "Movie 3",
+      "director": "Director 3",
+      "genre": "Genre 3"
+    },
+    {
+      "title": "Movie 4",
+      "director": "Director 4",
+      "genre": "Genre 4"
+    }
+  ]
