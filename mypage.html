@@ -260,13 +260,18 @@ function loadItems() {
                 swiperSlide.classList.add("swiper-slide");
 
                 var imageLink = document.createElement("a"); // 링크 요소 생성
-                imageLink.href = "https://www.google.com"; // 이동할 링크 설정
+				imageLink.href = "movie_detail.html"; // 이동할 링크 설정
 
-                var image = document.createElement("img");
-                image.classList.add("swpimg");
-                image.setAttribute("onmouseenter", "zoomIn(this)");
-                image.setAttribute("onmouseleave", "zoomOut(this)");
-                image.src = movie.poster;
+				var image = document.createElement("img");
+				image.classList.add("swpimg");
+				image.setAttribute("onmouseenter", "zoomIn(this)");
+				image.setAttribute("onmouseleave", "zoomOut(this)");
+				image.src = movie.poster;
+
+				image.addEventListener("click", function() {
+					window.location.href = "movie_detail.html"; // 이미지 클릭 시 movie_detail.html로 이동
+				});
+
 
                 imageLink.appendChild(image); // 이미지를 링크 요소의 자식으로 추가
                 swiperSlide.appendChild(imageLink); // 링크 요소를 슬라이드 요소의 자식으로 추가
