@@ -18,35 +18,30 @@
     <div class="full-page">
 
         <!-- Nav Bar -->
-        <div class="top-nav">
-            <!-- Logo -->
-            <div class="logo-box">
-                <img id="logo" src="logo.png">
-            </div>
+<div class="top-nav">
 
-            <!-- Nav Menu -->
-            <div class="nav-box">
-                <a href="#home">Home</a>
-                <a href="#popular">Trending</a>
-                <a href="#movies">Explore</a>
-                <a href="#favoties">My List</a>
-            </div>
-            
-            <!-- Search  -->
-            <div class="search-box">
-                <form>
-                    <input type="text" name="search" placeholder="Search movies..">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            
-            <!-- Profile -->
-            <div class="profile-box">
-                <a href="#profile"><img id="user" src="user.png"></a>
-            </div>
-        </div>
+    <!-- Logo -->
+    <div class="logo-box">
+        <img id="logo" src="imgs/logo.png">
+    </div>
 
-        <hr>
+    <!-- Search  -->
+    <div class="search-box">
+        <form>
+            <input type="text" name="search" id="searchInput" placeholder="Search movies..">
+            <ul style="color:white" id="searchResults"></ul>
+            <!-- <button type="submit">Search</button> -->
+        </form>
+    </div>
+    
+    <!-- Profile -->
+    <div class="profile-box">
+        <a href="#profile"><img id="user" src="imgs/user.png"></a>
+    </div>
+   
+</div>
+
+<hr>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
         
@@ -239,9 +234,68 @@
         </div>
     
     <script type="text/javascript" src="movieInfo.json"></script>
-    <script type="text/javascript" src="movieInfo2.json"></script>
+    <script type="text/javascript" src="movies.json"></script>
     <script>
-        window.onload = function() {
+
+    document.addEventListener("DOMContentLoaded", function() {
+  // Load movies data from JSON file
+  fetch("movies.json")
+    .then(response => response.json())
+    .then(data => {
+      const searchInput = document.getElementById("searchInput");
+      const searchResults = document.getElementById("searchResults");
+
+      searchInput.addEventListener("input", function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredMovies = data.filter(movie =>
+          movie.title.toLowerCase().includes(searchTerm)
+        );
+
+        displaySearchResults(filteredMovies);
+      });
+    })
+    .catch(error => console.error("Error loading movies data:", error));
+});
+
+function displaySearchResults(movies) {
+  const searchResults = document.getElementById("searchResults");
+
+  // Clear previous search results
+  searchResults.innerHTML = "";
+
+  if (movies.length === 0) {
+    // No matching movies found
+    const noResultsMessage = document.createElement("li");
+    noResultsMessage.textContent = "No matching movies found";
+    searchResults.appendChild(noResultsMessage);
+  } else {
+    // Display search results
+    movies.forEach(function(movie) {
+        var Link = document.createElement("a"); // 링크 요소 생성
+		Link.href = "movie_detail.html"; // 이동할 링크 설정
+
+
+      const movieItem = document.createElement("li");
+      movieItem.textContent = movie.title;
+
+      movieItem.addEventListener("click", function() {
+			window.location.href = "movie_detail.html"; // 이미지 클릭 시 movie_detail.html로 이동
+		});
+
+      Link.appendChild(movieItem);
+      searchResults.appendChild(movieItem);
+
+      
+    });
+  }
+}
+
+
+
+
+
+// wish list json
+    window.onload = function() {
     loadItems();
 }
 
