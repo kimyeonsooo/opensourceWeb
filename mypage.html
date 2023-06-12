@@ -1,0 +1,388 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    
+    <title>My Page</title>
+</head>
+
+<body>
+    <div class="full-page">
+
+        <!-- Nav Bar -->
+<div class="top-nav">
+
+    <!-- Logo -->
+    <div class="logo-box">
+        <img id="logo" src="imgs/logo.png">
+    </div>
+
+    <!-- Search  -->
+    <div class="search-box">
+        <form>
+            <input type="text" name="search" id="searchInput" placeholder="Search movies..">
+            <ul style="color:white" id="searchResults"></ul>
+            <!-- <button type="submit">Search</button> -->
+        </form>
+    </div>
+    
+    <!-- Profile -->
+    <div class="profile-box">
+        <a href="#profile"><img id="user" src="imgs/user.png"></a>
+    </div>
+   
+</div>
+
+<hr>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+        
+        <!-- Profile -->
+        <div class="container-fluid text-left bg-1">
+            <h1 >My Account</h1>
+            <div class="container-fluid text-center bg-1">
+                <img src="user.png" class="img-circle member" width="200" height="200" data-toggle="collapse" data-target="#member1">
+                <div id="member1" class="collapse"><p style="padding-top: 70px;">address@gmail.com</p></div>
+            </div>
+        </div>
+        
+        <!-- Wish List -->
+        <div class="margin">
+            <div class="swiper-container align-self-center">
+                <h1 style="margin-left: 20px; margin-bottom: -20px;">Wish List</h1>
+                
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        
+                    </div> -->
+                </div>
+
+                <!-- swiper button -->
+                <div class="swiper-button-next"></div><!-- next -->
+                <div class="swiper-button-prev"></div><!-- prev -->
+
+                <!-- page -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="margin">
+        <div class="chart-container align-self-center" id="chartContainer">
+            <h1 style="margin-left: 20px; margin-bottom: -20px;">My preference</h1>
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <canvas style="width: 500px; height: 300px; padding: 50px;" id="myChart"></canvas>
+            </div>
+        </div>
+        </div>
+
+
+        <script language="JavaScript">
+        // Move the drawChart() function outside the onload event handler
+        function drawChart() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['★★★★★', '★★★★', '★★★', '★★', '★'],
+                    datasets: [{
+                        data: [23, 20, 10, 5, 2],
+                        backgroundColor: ['#FFD400', '#FFDD33', '#FFE359', '#FFF0A6', '#FFFBE5'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        animateRotate: true,
+                        duration: 3000
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        }
+
+        // Use Intersection Observer API to detect when the chart container comes into view
+        var chartContainer = document.getElementById('chartContainer');
+        var chartObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                drawChart(); // Call drawChart() when the chart container is in view
+                chartObserver.unobserve(chartContainer); // Stop observing once the chart is drawn
+            }
+        });
+        chartObserver.observe(chartContainer);
+    </script>
+    
+
+    <div class="margin">
+        <div class="swiper-container align-self-center">
+            <h2 style="padding-left: 70px;">★★★★★</h2>
+            <div class="swiper-wrapper ">
+                
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Newworld.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Snowpiercer.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="TheHost.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="SetMeFree.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Theman.jpg"></div>			
+            </div>
+        
+        <!-- swiper button -->
+        <div class="swiper-button-next" ></div><!-- next -->
+        <div class="swiper-button-prev"></div><!-- prev -->
+    
+        <!-- page -->
+        <div class="swiper-pagination"></div>
+    
+        </div>
+    </div>
+    
+    <div class="margin">
+        <div class="swiper-container align-self-center">
+            <h2 style="padding-left: 70px;">★★★★</h2>
+            <div class="swiper-wrapper ">
+                
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this) " src="SetMeFree.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="TheWailing.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Hummingbird.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Maggie.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="MemoriesofMurder.jpg"></div>			
+            </div>
+        
+        <!-- swiper button -->
+        <div class="swiper-button-next" ></div><!-- next -->
+        <div class="swiper-button-prev"></div><!-- prev -->
+    
+        <!-- page -->
+        <div class="swiper-pagination"></div>
+    
+        </div>
+    </div>
+    
+    <div class="margin">
+        <div class="swiper-container align-self-center">
+            <h2 style="padding-left: 70px;">★★★</h2>
+            <div class="swiper-wrapper ">
+                
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Admiral.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Minari.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Parasite.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Newworld.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="SetMeFree.jpg"></div>			
+            </div>
+        
+        <!-- swiper button -->
+        <div class="swiper-button-next" ></div><!-- next -->
+        <div class="swiper-button-prev"></div><!-- prev -->
+    
+        <!-- page -->
+        <div class="swiper-pagination"></div>
+    
+        </div>
+    </div>
+    
+    <div class="margin">
+        <div class="swiper-container align-self-center">
+            <h2 style="padding-left: 70px;">★★</h2>
+            <div class="swiper-wrapper ">
+                
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="TheHost.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Snowpiercer.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="TheHost.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="SetMeFree.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Theman.jpg"></div>			
+            </div>
+        
+        <!-- swiper button -->
+        <div class="swiper-button-next" ></div><!-- next -->
+        <div class="swiper-button-prev"></div><!-- prev -->
+    
+        <!-- page -->
+        <div class="swiper-pagination"></div>
+    
+        </div>
+    </div>
+    
+    <div class="margin">
+        <div class="swiper-container align-self-center">
+            <h2 style="padding-left: 70px;">★</h2>
+            <div class="swiper-wrapper ">
+                
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="SetMeFree.jpg"></div>
+                <div class="swiper-slide"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="TheWailing.jpg"></div>
+                </div>
+        
+        <!-- swiper button -->
+        <div class="swiper-button-next" ></div><!-- next -->
+        <div class="swiper-button-prev"></div><!-- prev -->
+    
+        <!-- page -->
+        <div class="swiper-pagination"></div>
+    
+        </div>
+    </div>
+        </div>
+        </div>
+        </div>
+    
+    <script type="text/javascript" src="movieInfo.json"></script>
+    <script type="text/javascript" src="movies.json"></script>
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+  // Load movies data from JSON file
+  fetch("movies.json")
+    .then(response => response.json())
+    .then(data => {
+      const searchInput = document.getElementById("searchInput");
+      const searchResults = document.getElementById("searchResults");
+
+      searchInput.addEventListener("input", function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredMovies = data.filter(movie =>
+          movie.title.toLowerCase().includes(searchTerm)
+        );
+
+        displaySearchResults(filteredMovies);
+      });
+    })
+    .catch(error => console.error("Error loading movies data:", error));
+});
+
+function displaySearchResults(movies) {
+  const searchResults = document.getElementById("searchResults");
+
+  // Clear previous search results
+  searchResults.innerHTML = "";
+
+  if (movies.length === 0) {
+    // No matching movies found
+    const noResultsMessage = document.createElement("li");
+    noResultsMessage.textContent = "No matching movies found";
+    searchResults.appendChild(noResultsMessage);
+  } else {
+    // Display search results
+    movies.forEach(function(movie) {
+        var Link = document.createElement("a"); // 링크 요소 생성
+		Link.href = "movie_detail.html"; // 이동할 링크 설정
+
+
+      const movieItem = document.createElement("li");
+      movieItem.textContent = movie.title;
+
+      movieItem.addEventListener("click", function() {
+			window.location.href = "movie_detail.html"; // 이미지 클릭 시 movie_detail.html로 이동
+		});
+
+      Link.appendChild(movieItem);
+      searchResults.appendChild(movieItem);
+
+      
+    });
+  }
+}
+
+
+
+
+
+// wish list json
+    window.onload = function() {
+    loadItems();
+}
+
+function loadItems() {
+    fetch("movieInfo.json")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data); // 불러온 JSON 데이터를 콘솔에 출력
+
+            var swiperWrapper = document.querySelector(".swiper-wrapper");
+
+            data.forEach(function(movie, index) {
+                var swiperSlide = document.createElement("div");
+                swiperSlide.classList.add("swiper-slide");
+
+                var imageLink = document.createElement("a"); // 링크 요소 생성
+				imageLink.href = "movie_detail.html"; // 이동할 링크 설정
+
+				var image = document.createElement("img");
+				image.classList.add("swpimg");
+				image.setAttribute("onmouseenter", "zoomIn(this)");
+				image.setAttribute("onmouseleave", "zoomOut(this)");
+				image.src = movie.poster;
+
+				image.addEventListener("click", function() {
+					window.location.href = "movie_detail.html"; // 이미지 클릭 시 movie_detail.html로 이동
+				});
+
+
+                imageLink.appendChild(image); // 이미지를 링크 요소의 자식으로 추가
+                swiperSlide.appendChild(imageLink); // 링크 요소를 슬라이드 요소의 자식으로 추가
+                swiperWrapper.appendChild(swiperSlide);
+            });
+
+            // Swiper 초기화
+            new Swiper('.swiper-container', {
+                slidesPerView: 3, // 동시에 보여줄 슬라이드 갯수
+                spaceBetween: 30, // 슬라이드간 간격
+                slidesPerGroup: 3, // 그룹으로 묶을 수, slidesPerView와 같은 값을 지정하는 것이 좋음
+
+                // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+                // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듦
+                loopFillGroupWithBlank: true,
+                loop: true, // 무한 반복
+
+                pagination: { // 페이징
+                    el: '.swiper-pagination',
+                    clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                },
+                navigation: { // 네비게이션
+                    nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+                    prevEl: '.swiper-button-prev', // 이전 버튼 클래스명
+                },
+            });
+        })
+        .catch(function(error) {
+            console.log('There has been a problem with your fetch operation: ', error.message);
+        });
+}
+
+
+
+
+// 이미지 확대
+function zoomIn(element) {
+    element.style.transform = "scale(1.2)";
+}
+
+// 이미지 축소
+function zoomOut(element) {
+    element.style.transform = "scale(1)";
+}
+
+// poster mousein 
+function bigImg(x){
+		x.style.transform = "scale(1.2)";
+  		x.style.zIndex = "1";
+	}
+
+	// poster mouseout
+	function normalImg(x){
+		x.style.transform = "scale(1)";
+  		x.style.zIndex = "0";
+	}
+        
+    </script>
+</body>
+</html>

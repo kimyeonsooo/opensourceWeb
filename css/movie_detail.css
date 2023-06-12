@@ -1,0 +1,386 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.full-page {
+    padding-bottom: 20px;
+    background: #1e1e2a;
+}
+
+/* Header */  
+.top-nav {
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* styling logo */  
+.logo-box {
+    margin-top: 40px;
+    margin-right: 70px;
+}
+
+#logo {
+    height: 40px;
+    width: 240px;
+}
+
+/* styling search bar */
+.search-box {
+    width: 400px;
+    height: 40px;
+    margin-left: 23%;
+    margin-top: 35px;
+
+}
+
+input[type=text] {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius:10px;
+    border: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* styling profile */  
+.profile-box {
+    height: 60px;
+    width: 60px;
+    margin-top: 25px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+#user {
+    height: 100%;
+    width: 100%;
+}
+
+hr {
+    margin: 0px;
+    color: slategrey;
+}
+
+/* Body */
+.main-picture-box {
+    height: 350px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Still-cut */
+.main-scene-1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.about-movie-box {
+    height: 200px;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: -100px;
+    margin-left: 13.5%;
+    top: 80px;
+    z-index: 2;
+    display: inline-flex;
+    position: relative;
+    justify-content: left;
+}
+
+.movie-poster {
+    height: 260px;
+    width: 190px;
+    border: 1px solid white;
+
+}
+
+.poster-img {
+    height: 260px;
+    width: 190px;
+    object-fit: fit;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  
+/* Modal Content (image) */
+.modal-content {
+    height: 750px;
+    width: 500px;
+    margin: auto;
+    display: block;
+}
+  
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+  
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.about-movie-box-2 {
+    width: 700px;
+    margin-left: 65px;
+}
+
+.title-box {
+    width: 700px;
+    margin-top: 10px;
+    margin-left: 8px;
+    display: block;
+    float: left;
+}
+
+.title {
+    margin-bottom: -5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.title-box p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.title-box hr {
+    margin: -5;
+    color: white;
+}
+
+.rating *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* combine half star to one */
+.rating * {
+    margin: 0;
+    padding: 0;
+}
+
+.rating {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 25px;
+    display: block;
+    float: left;
+}
+
+.rating-label {
+    margin-top: 10px;
+    margin-left: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.rating-star {
+    position: relative;
+    display: flex;
+    float: left;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+}
+
+.rating-star input {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rating-star input::before {
+    content: '\eeb8'; /* star icon */
+    position: absolute;
+    font-family: boxicons;
+    font-size: 34px;
+    position: absolute;
+    left: 4px;
+    color: #d4d4d4;
+}
+
+.rating-star input:nth-child(2n + 1)::before {
+    right: 4px;
+    left: initial;
+}
+
+.rating-star input:hover ~ input::before,
+.rating-star input:hover::before,
+.rating-star input:checked ~ input::before,
+.rating-star input:checked::before {
+    color: #ffeb3b;
+}
+
+.button {
+    width: 400px;
+    display: block;
+    float: left;
+}
+
+.button a {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.button button {
+    margin-bottom: 5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    outline: inherit;
+	color: inherit;
+	border: none;
+	padding: 0;
+}
+
+.movie-detail-box {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 170px;
+    display: block;
+    position: relative;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.movie-overview {
+    padding-top: 15px;
+    padding-left: 52px;
+    padding-right: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info {
+    display: block;
+    margin-bottom: 20px;
+    
+}
+
+.info p {
+    margin: 7px;
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info br {
+    content: "";
+    display: block;
+    margin-top: 10px;
+}
+
+.summary {
+    display: block;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary p {
+    padding-left: 5px;
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary br {
+    content: "";
+    display: block;
+    margin-top: 5px;
+}
+
+.movie-detail-box hr {
+    margin-left: -5px;
+    margin-top: 15px;
+}
+
+.cast-box {
+    padding-top: 20px;
+    padding-left: 52px;
+    padding-right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cast {
+    display: grid;
+    margin-left: 25px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 15px;
+}
+
+.cast-img {
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cast-name {
+    width: 150px;
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.role {
+    font-size: 14px;
+    color: #8d8a8a;
+}

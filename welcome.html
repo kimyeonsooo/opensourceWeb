@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script> 
+
+
+
+</script> 
+<link rel="stylesheet" href="css/welcome.css">
+
+
+</head>
+<body>
+  <div class="back">
+
+  </div>
+      <div class="bgimg-container1">
+          <div class="back"><img class=bgimg src="movie-1.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-2.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-3.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-4.jpg"></div>
+      </div>
+      <div class="bgimg-container2" style="margin-left: 200px;">
+          <div class="back"><img class=bgimg src="movie-8.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-7.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-6.jpg"></div>
+          <div class="back"><img class=bgimg src="movie-5.jpg"></div>
+      </div>
+      
+
+
+  
+  <div class="box_container">
+    <div class="login_container" style="padding-bottom: 30px;">
+        <a style="padding-top: 30px; font-size: 40px;" class="logo">
+            ROTTON<span>EGGs</span>
+        </a>
+        <br>
+        <button onmouseover="change(this)" onmouseout="normal(this)" style="padding-top: 30px; padding-right: 30px; font-size: 20px;" class="sign" id="signin">SIGN IN</button>
+        <button onmouseover="change(this)" onmouseout="normal(this)" style="font-size: 20px;" class="sign" id="signup">SIGN UP</button>
+    </div>
+
+    </div>
+</body>
+
+<script>
+
+  //background animation
+  $(document).ready(function(){
+  
+    var div1 = $(".bgimg-container1");  
+    var div2 = $(".bgimg-container2");
+    div1.animate({marginLeft: "140px"}, 15000);
+    div2.animate({marginLeft: "-70px"}, 20000);
+    
+  });
+
+  // click signin button -> move to signin.html 
+    const btn1 = document.getElementById("signin");
+
+    btn1.addEventListener("click", clickHandler1);
+
+    function clickHandler1(){
+      window.location.href = "signin.html";
+    }
+
+  // click signup button -> move to signup.html 
+    const btn2 = document.getElementById("signup");
+
+    btn2.addEventListener("click", clickHandler2);
+
+    function clickHandler2(){
+      window.location.href = "signup.html";
+    }
+        var button = document.getElementById("signin");
+      button.addEventListener("click", function() {
+        button.classList.toggle("active");
+      });
+
+
+  // color change
+    function change(element) {
+        element.style.color = "#ffb43a";
+    }
+
+  // color normal
+    function normal(element) {
+        element.style.color = "white";
+    }
+</script>
+</html>

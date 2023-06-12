@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script> 
+
+</script> 
+<link rel="stylesheet" href="css/signin.css">
+
+
+</head>
+<body>
+  <div class="back">
+
+  </div>
+  <div class="bgimg-container1">
+    <div class="back"><img class=bgimg src="movie-1.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-2.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-3.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-4.jpg"></div>
+</div>
+<div class="bgimg-container2" style="margin-left: 200px;">
+    <div class="back"><img class=bgimg src="movie-8.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-7.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-6.jpg"></div>
+    <div class="back"><img class=bgimg src="movie-5.jpg"></div>
+</div>
+
+  
+  <div class="box_container">
+    <div class="login_container">
+      <p style="font-size: 30px;" class="form_title_p">Sign In</p>
+    </div>
+
+    <div id="text" >
+      <div><input type="text" class="email" placeholder="Email" ></div>
+      <div><input type="text" class="password" placeholder="Password" ></div>
+    </div>
+
+    <button id="signin">Sign In</button>
+  <div>
+
+</body>
+
+<script>
+
+  //background animation
+  $(document).ready(function(){
+  
+    var div1 = $(".bgimg-container1");  
+    var div2 = $(".bgimg-container2");
+    div1.animate({marginLeft: "140px"}, 15000);
+    div2.animate({marginLeft: "-70px"}, 20000);
+  });
+
+
+  // click siginin button  -> move main page 
+
+  const btn2 = document.getElementById("signin");
+
+  btn2.addEventListener("click", clickHandler);
+
+  function clickHandler(){
+
+    window.location.href = "main.html";
+
+  }
+  
+</script>
+</html>
