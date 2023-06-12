@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Decision to Leave",
+        "year": "2021",
+        "country": "Korea",
+        "genre": "Romance/Drama/Mystery",
+        "running Time": "2h 18m",
+        "summary": "Hae-Joon, a seasoned detective, investigates the suspicious death of a man on a mountaintop. Soon, he begins to suspect Seo-rae, the deceased's wife, while being unsettled by his attraction to her.",
+        "poster": "Decision.jpg",
+        "stillcut": "Decision_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/m5DP0eR"
+    },{
+        "name": "Parasite",
+        "year": "2019",
+        "country": "Korea",
+        "genre":"Drama",
+        "running Time":"2h 11m",
+        "summary": "All unemployed, Ki-taek's family takes peculiar interest in the Parks for their livelihood until they get entangled in an expected incident.",
+        "poster":"Parasite.jpg",
+        "stillcut":"Parasite_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mdRL4eL"
+    }, {
+        "name": "Snowpiercer",
+        "year": "2013",
+        "country": "Korea",
+        "genre":"Action/SF/Thriller/Adventure/Drama",
+        "running Time":"2h 5m",
+        "summary": "In a future where a failed global-warming experiment kills off most life on the planet, a class system evolves aboard the Snowpiercer, a train that travels around the globe via a perpetual-motion engine.",
+        "poster":"Snowpiercer.jpg",
+        "stillcut":"Snowpiercer_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mO02n15"
+    },{
+        "name": "House of Hummingbird",
+        "year": "2018",
+        "country": "Korea",
+        "genre":"Drama",
+        "running Time":"2h 19m",
+        "summary": "Whatever she does, Eunhee feels like an outsider. Then her new Chinese teacher turns out to be so utterly different from everybody else. A compassionate and meticulously told narrative of a seemingly regular summer that leaves nothing unchanged.",
+        "poster":"Hummingbird.jpg",
+        "stillcut":"Hummingbird_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/m5DGrlR"
+    },{
+        "name": "Minari",
+        "year": "2020",
+        "country": "Korea",
+        "genre":"Drama",
+        "running Time":"1h 55m",
+        "summary": "A Korean-American family moves to Arkansas in search of their own American Dream. With the arrival of their sly, foul-mouthed, but incredibly loving grandmother, the stability of their relationships is challenged even more in this new life in the rugg...",
+        "poster":"Minari.jpg",
+        "stillcut":"Minari_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/m53m90n"
+    },{
+        "name": "Maggie",
+        "year": "2018",
+        "country": "Korea",
+        "genre":"Mystery/Comedy",
+        "running Time":"1h 50m",
+        "summary": "An x-ray capturing sexual intercourse turns a hospital upside down. Nurse Yeo Yun-young suspects it might be herself and her boyfriend. On her way to work, she worries that she might have to quit her work but worse things happen in the hospital.",
+        "poster":"Maggie.jpg",
+        "stillcut":"Maggie_stillcut.jpg",
+        "url":"https://pedia.watcha.com/contents/mOPoG8D"
+    },
+    {
+        "name": "New World",
+        "year": "2012",
+        "country": "Korea",
+        "genre": "Crime/Drama/Action",
+        "running Time": "2h 14m",
+        "summary": "An undercover cop has his loyalties tested when the boss of the corporate gang he's spent years infiltrating dies.",
+        "poster": "Newworld.jpg",
+        "stillcut": "Newworld_stillcut.jpg",
+        "url": "https://pedia.watcha.com/contents/m5e8v3d"
+    }
+]
