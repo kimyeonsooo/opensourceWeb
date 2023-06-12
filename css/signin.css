@@ -24,19 +24,20 @@ body{
     margin-left: 10px;
 }
 
-    .box_container{
-        background: #1e1e2a;
-        height:auto;
-        width:200px;
-        text-align: center;
-        border-radius: 10px 10px 10px 10px;
-        margin: 0 auto;
-        margin-top: 10%;
-        margin-left: 40%;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        position: absolute;
-    }
+.box_container{
+  background: #1e1e2a;
+  height:auto;
+  width:500px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  /* margin: 0 auto; */
+  margin-top: 13%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 10px;
+  padding-bottom: 3%;
+  position: absolute;
+}
 
     .form_title_p{
       color: white;
@@ -71,12 +72,17 @@ body{
       color: #a0a0a0;
     }
 
-    .signin{
+    #signin{
       border:none;
       background-color: #ffb43a;
       color: white;
       height: 30px;
       width: 80%;
       border-radius: 5px 5px 5px 5px;
+      margin-top: 3%;
       
+    }
+
+    .active {
+      border-color: #ffb43a;
     }
